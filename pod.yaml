@@ -1,2 +1,10 @@
 apiVersion: v1
-kind:
+kind: Pod
+metadata:
+  name: processing-large-reports-in-browser-pod
+spec:
+  containers:
+  - name: processing-large-reports-in-browser
+    image: gulhermepsantos/processing-large-reports-in-browser:latest
+    ports: 
+    - containerPort: 3000
