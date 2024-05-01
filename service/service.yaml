@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+  labels:
+    app: service-replicaset  
+spec:
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+      app.kubernetes.io/name: processing-large-reports-in-browser
+      app.kubernetes.io/part-of: node.js
+  type: NodePort
