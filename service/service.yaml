@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: service
   labels:
-    app: service-replicaset  
+    app: service-app
 spec:
   ports:
     - port: 80
